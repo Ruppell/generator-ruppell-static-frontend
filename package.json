@@ -1,0 +1,14 @@
+{
+  "name": "generator-ruppell-static-frontend",
+  "version": "0.1.0",
+  "description": "Generates a static frontend structure for website theme development.",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  }
+}
