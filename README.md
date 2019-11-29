@@ -1,4 +1,4 @@
-# Ruppell Static Frontend Yeoman Generator
+# Yeoman Generator | Ruppell Static Frontend
 
 Generates a static frontend structure for website theme development.
 
