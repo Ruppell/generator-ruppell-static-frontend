@@ -1,8 +1,8 @@
 var fs = require('fs');
 var favicons = require('favicons'),
-    source = './images/favicon.png',              // Source image(s). `string`, `buffer` or array of `string`
+    source = './src/images/favicon.png',              // Source image(s). `string`, `buffer` or array of `string`
     configuration = {
-      path: "./images/favicons/",               // Path for overriding default icons path. `string`
+      path: "./assets/images/favicons/",               // Path for overriding default icons path. `string`
       appName: null,                            // Your application's name. `string`
       appShortName: null,                       // Your application's short_name. `string`. Optional. If not set, appName will be used
       appDescription: null,                     // Your application's description. `string`
@@ -50,13 +50,15 @@ var favicons = require('favicons'),
       }
 
       // create directory if not exists
-      if (!fs.existsSync('./images/favicons/')){
-        fs.mkdirSync('./images/favicons/');
+      if (!fs.existsSync('./assets/images/favicons/')){
+          fs.mkdirSync('./assets/');
+	  fs.mkdirSync('./assets/images/');
+	  fs.mkdirSync('./assets/images/favicons/');
       }
 
       // save generated favicons
       response.images.forEach(function(_imageFile) {
-        fs.writeFile('./images/favicons/' + _imageFile.name, _imageFile.contents, function(err) {
+        fs.writeFile('./assets/images/favicons/' + _imageFile.name, _imageFile.contents, function(err) {
           if(err) {
             return console.log(err);
           }
@@ -65,7 +67,7 @@ var favicons = require('favicons'),
 
       // save generated files
       response.files.forEach(function(_file) {
-        fs.writeFile('./images/favicons/' + _file.name, _file.contents, function(err) {
+        fs.writeFile('./assets/images/favicons/' + _file.name, _file.contents, function(err) {
           if(err) {
             return console.log(err);
           }
@@ -73,11 +75,11 @@ var favicons = require('favicons'),
       });
 
       // save all meta tags to an html file
-      if (fs.existsSync('./images/favicons/meta.html')) {
-        fs.unlinkSync('./images/favicons/meta.html'); // remove it fist
+      if (fs.existsSync('./assets/images/favicons/meta.html')) {
+        fs.unlinkSync('./assets/images/favicons/meta.html'); // remove it fist
       }
 
-      var file = fs.createWriteStream('./images/favicons/meta.html');
+      var file = fs.createWriteStream('./assets/images/favicons/meta.html');
       file.on('error', function(err) { /* error handling */ });
       response.html.forEach(function(line) { file.write(line + '\n'); });
       file.end();
