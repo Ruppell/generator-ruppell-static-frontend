@@ -2,6 +2,7 @@
   "name": "generator-ruppell-static-frontend",
   "version": "1.0.1",
   "description": "Generates a static frontend structure for plain HTML theme development.",
+  "license" : "Apache-2.0",
   "files": [
     "generators"
   ],
