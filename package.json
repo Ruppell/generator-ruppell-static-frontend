@@ -1,7 +1,7 @@
 {
   "name": "generator-ruppell-static-frontend",
-  "version": "0.1.0",
-  "description": "Generates a static frontend structure for website theme development.",
+  "version": "1.0.0",
+  "description": "Generates a static frontend structure for plain HTML theme development.",
   "files": [
     "generators"
   ],
