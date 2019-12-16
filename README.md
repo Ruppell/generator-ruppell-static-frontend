@@ -41,3 +41,4 @@ yo ruppell-static-frontend
 - cssnano
 - favicons
 - jquery
+- normalize.css

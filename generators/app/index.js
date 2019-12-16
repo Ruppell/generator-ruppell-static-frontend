@@ -98,6 +98,9 @@ module.exports = class extends Generator {
     // favicon generator
     this.npmInstall(['favicons@^5.0.0'], { 'save-dev': true });
 
+    // normalize
+    this.npmInstall(['normalize.css@^8.0.1']);
+
     // jquery
     this.npmInstall(['jquery@^3.0.0']);
   }
