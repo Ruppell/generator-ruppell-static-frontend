@@ -1,6 +1,6 @@
 {
   "name": "generator-ruppell-static-frontend",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generates a static frontend structure for plain HTML theme development.",
   "license": "Apache-2.0",
   "url": "https://github.com/Ruppell/generator-ruppell-static-frontend/issues",
