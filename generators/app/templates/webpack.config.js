@@ -9,7 +9,7 @@ module.exports = {
         filename: 'scripts.js'
     },
     plugins: [
-	new ImageminPlugin({ test: 'assets/images/**' }),
+        new ImageminPlugin({ test: 'assets/images/**' }),
     ],
     module: {
         rules: [
@@ -34,7 +34,7 @@ module.exports = {
                             name: "../css/[name].css"
                         }
                     },
-		    'postcss-loader',
+                    'postcss-loader',
                     'sass-loader',
                 ],
             },
